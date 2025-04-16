@@ -12,6 +12,7 @@ export class loadScene extends Component {
     bLoadFinish=false;
     progressWidth:number=0;
     start() {
+        console.log=()=>{}
         this.progress.progress=0;
         this.progressWidth = this.progress.getComponent(UITransform).contentSize.width;
     }
