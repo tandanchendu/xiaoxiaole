@@ -2,6 +2,7 @@ import { _decorator, Component, director, instantiate, Label, math, Node, NodePo
 import { blockAttr, spriteBlock } from './spriteBlock';
 import { levelConfig } from './config';
 import { gameEnd } from './gameEnd';
+import { audioManager } from './audioManager';
 const { ccclass, property } = _decorator;
 export const ROW=8;
 export const COL=8;
@@ -88,6 +89,7 @@ export class gameScene extends Component {
         director.on("onBlockTouch",this.onTouchBlock,this);
     }
     onTouchBlock(row,col){
+        audioManager.Instance.playAudio("select")
         if(this.canTouch==false)
             return;
         if(this.selectRow==-1||this.selectCol==-1){
@@ -204,7 +206,7 @@ export class gameScene extends Component {
                 }
             }
         }
-        
+        audioManager.Instance.playAudio("getScore")
         let labEffect 
         if(this.labEffectPool.size()>0){
             labEffect = this.labEffectPool.get();
