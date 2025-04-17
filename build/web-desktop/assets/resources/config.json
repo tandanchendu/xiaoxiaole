@@ -1,0 +1,1 @@
+{"importBase":"import","nativeBase":"native","name":"resources","deps":[],"uuids":["1b4strdaRDboGG5hY7j6VA","90I28vXO5K1pTyvYGOROHa"],"paths":{"0":["sounds/getScore",0],"1":["sounds/select",0]},"scenes":{},"packs":{},"versions":{"import":[],"native":[]},"redirect":[],"debug":false,"extensionMap":{},"hasPreloadScript":true,"dependencyRelationships":{},"types":["cc.AudioClip"]}
